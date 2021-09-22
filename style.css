@@ -1,0 +1,292 @@
+body,
+ul,
+li,
+p {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial;
+}
+
+body {
+    background: white;
+    margin-bottom: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.header a {
+    color: white;
+}
+
+a:hover {
+    color: #ff0037;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* menu */
+
+.header {
+    position: sticky;
+    top: 0;
+    background-image: linear-gradient(45deg, rgb(67, 81, 212), purple);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    background-color: #4B0082;
+    margin-left: 10px;
+    border-radius: 15px;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+}
+
+.fab {
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+
+/* texto - imagem do sobre*/
+
+.sobre p {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: left;
+}
+
+.sobreimg {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: left
+}
+
+
+/*css flex*/
+
+.flex {
+    display: flex;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex>div {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+
+/* css grid-home*/
+
+.Grid1 {
+    padding-top: 20px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+
+.Grid1>div:nth-child(n+4) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.Grid1>div.anuncio {
+    grid-column: 1;
+    grid-row: 2 / 5;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .Grid1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .Grid1>div:nth-child(n+4) {
+        display: block;
+    }
+    .Grid1>div.anuncio {
+        grid-column: auto;
+        grid-row: auto;
+        order: -1;
+    }
+}
+
+
+/*video home poste*/
+
+.videohome {
+    margin-top: 100px;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.tempo p {
+    margin-top: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+
+/* CSS Grid Home-Postes*/
+
+.Gridposte {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-gap: 200px;
+    max-width: 800px;
+    padding: 10px;
+    margin-left: 100px;
+}
+
+.Gridposte>div p {
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.sidebargrid {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    max-height: 200px;
+}
+
+.imgposte {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.sidebardestaque {
+    display: grid;
+    grid-template-columns: 250px;
+    margin-bottom: 30px;
+    max-width: 800px;
+}
+
+
+/* videos noticiais*/
+
+.Gridnoticias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 10px;
+}
+
+.Grid-n-item:nth-child(1) {
+    grid-row: 1 / 3;
+    grid-template-columns: 250px;
+    margin-left: 150px;
+}
+
+.Grid-n-item {
+    display: grid;
+    grid-template-columns: 250px;
+}
+
+.Grid-n-item img {
+    grid-column: 1;
+    grid-row: 1 / 3;
+}
+
+.Grid-n-item p {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    color: white;
+    grid-column: 1;
+    grid-row: 2;
+    align-self: end;
+}
+
+
+/*footer*/
+
+.footer {
+    position: sticky;
+    top: 0;
+    background-image: linear-gradient(45deg, rgb(67, 81, 212), purple);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.conteinerfooter {
+    display: flex;
+    margin: 0 auto;
+}
+
+.conteinerfooter>li {
+    margin-left: 90px;
+    font-size: 15px;
+}
+
+.conteinerfooter h3 {
+    color: white;
+}
+
+.conteinerfooter p {
+    color: white;
+}
+
+.conteinerfooter p:hover {
+    color: #ff0037
+}
+
+.conteinerfooter i {
+    color: white;
+}
+
+.conteinerfooter i:hover {
+    color: #ff0037
+}
+
+
+/* iconis */
